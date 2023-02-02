@@ -49,6 +49,23 @@ export async function getStaticProps() {
  const data = await import ('../data/vocabulary.json')
  //je les assigne dans un tableau
  const array = data.vocabulary;
+//je verifie que le tableau n'est pas vide 
+//si il est vide je retourne un objet avec un props notfound a true
+//  if (array.lenght === 0) {
+//     return {
+//       notfound: true
+//     }
+//   }
+
+//je peux renvoyer aussi un objet avec un redirect qui va me rediriger vers une autre page
+if (array.lenght === 0) {
+  return {
+    redirect:{
+      destination: '/',
+    } 
+  }
+}
+
 //tres important je retounre un objet avec un props qui contient le tableau
  return{
   props:{

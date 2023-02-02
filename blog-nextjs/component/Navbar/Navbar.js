@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav>
         <Link href='acceuil'>acceuil</Link>
         <Link href='blog'>blog</Link>
-        <Link href='Contact'>Contact</Link>
+        <Link href='Contact'>Isr</Link>
 
     </nav>
   )

@@ -2,7 +2,7 @@ import React from "react"
 
 export default function contact(props) {
   console.log(props);
-  return <div>contact</div>;
+  return <div>isr</div>;
 }
 
 export async function getStaticProps() {
