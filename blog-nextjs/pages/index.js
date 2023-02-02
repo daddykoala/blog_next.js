@@ -1,10 +1,10 @@
 
-import { Inter } from '@next/font/google'
+
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 import Navbar from '@/component/Navbar/Navbar'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 
 //pour utiliser les données locales il faut utiliser la function getStaticProps
