@@ -11,7 +11,7 @@ export default function Home() {
   const id = "article"
   return (
     <>
-    <Navbar/>
+    
     <div className={styles.container}>
     <h1> hello </h1>
     

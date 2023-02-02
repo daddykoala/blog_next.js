@@ -8,7 +8,7 @@ export default function article() {
   console.log(router.query);
   console.log(router.query.slug);
   console.log(router.asPath);
-//méthode push pour ramplacer le link de next
+//méthode push pour remplacer le link de next
   const pushFonction = () => {
     router.push("/");
   };
