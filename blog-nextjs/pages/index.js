@@ -1,8 +1,7 @@
-
+import {v4 as uuidv4} from "uuid";
 
 import styles from '@/styles/Home.module.css'
-import Link from 'next/link'
-import Navbar from '@/component/Navbar/Navbar'
+
 
 
 
@@ -27,7 +26,7 @@ export default function Home(props) {
         {props.array.map((element) => {
           return(
 
-          <tr>
+          <tr key={uuidv4}>
             <td>{element.en}</td>
             <td>{element.fr}</td>
           </tr>

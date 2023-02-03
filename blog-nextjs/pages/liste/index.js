@@ -1,7 +1,8 @@
 import Link from "next/link";
+
 import {v4 as uuidv4} from "uuid";
 
-export default function Liste(props) {
+export default function Listes(props) {
   console.log(props);
 
   return (
@@ -13,8 +14,8 @@ export default function Liste(props) {
       </ul>
       {props.array.map((element) =>(
         <li key={uuidv4()} className="list-group-item">
-            <Link href={Object.keys(element)[0]}>
-                {Object.keys(element)[0]}
+            <Link href={`/listes/${element.name}`}>
+                {element.name}
             </Link>
             
         </li>

@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Container from '@/component/container/Container'
 
 
