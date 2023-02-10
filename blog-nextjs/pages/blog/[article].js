@@ -3,7 +3,10 @@ import React from 'react'
 export default function article(props) {
     console.log(props);
   return (
-    <div>article</div>
+    <div className='container px-4 pt-5' >
+        <h1 className='text-center mb-4'>{props.article.title}</h1>
+        <p>{props.article.body}</p>
+        </div>
   )
 }
 
