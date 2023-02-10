@@ -10,7 +10,7 @@ export default function Home(props) {
       <span>Le blog des reconvertis dans le developpement web</span>
 
       <div className="row mt-5">
-        <div className="col-12 col-sm-6">
+        <div className="col-12 col-sm-6" style={{minHeight:"200px"}}>
           <div className="card w-100 h-100 ">
             <div className="card-body">
               <h5 className="card-title"> Les articles</h5>
@@ -28,7 +28,7 @@ export default function Home(props) {
           </div>
         </div>
 
-        <div className="col-12 col-sm-6">
+        <div className="col-12 col-sm-6" style={{minHeight:"200px"}}>
           <div className="card w-100 h-100 ">
             <div className="card-body">
               <h5 className="card-title"> Les articles</h5>
