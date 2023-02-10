@@ -1,6 +1,6 @@
-import '@/styles/globals.css'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import Container from '@/component/container/Container'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 //j'imlport le composant container et je l'englobe autour de tout les autres composants(un peu comme un provider)
@@ -8,10 +8,8 @@ import Container from '@/component/container/Container'
 //les pagesProps sont les props qui sont passées par nextjs.
 export default function App({ Component, pageProps }) {
   return (
-    <Container>
 
       <Component {...pageProps} />
-    </Container>
     
   )
 }

@@ -1,74 +1,51 @@
-import {v4 as uuidv4} from "uuid";
-
-import styles from '@/styles/Home.module.css'
-
-
-
-
+import { v4 as uuidv4 } from "uuid";
+import Link from "next/link";
 
 //pour utiliser les données locales il faut utiliser la function getStaticProps
 // et faire passer les données en props
 export default function Home(props) {
-
-  console.log(props);
-
-  const id = "article"
   return (
-    <>
-    
-    <div className={styles.container}>
-    <h1> Vocabulaire de base</h1>
-    <table className={styles.tableau}>
-      <tbody>
-        {/* si dans la methode maps on a un seul parametre on peut l'ecriture sans parenthese
-        si l'on met des parenthes et des crochets on doit !!! mettre un return !!! 
-        les parentheses induisent le return pas les crochets*/}
-        {props.array.map((element) => {
-          return(
+    <div className="container px-4 pt-5">
+      <h1>Bienvenue sur Code.io</h1>
+      <span>Le blog des reconvertis dans le developpement web</span>
 
-          <tr key={uuidv4}>
-            <td>{element.en}</td>
-            <td>{element.fr}</td>
-          </tr>
-          )
-        })}
-      </tbody>
-    </table>
-    
+      <div className="row mt-5">
+        <div className="col-12 col-sm-6">
+          <div className="card w-100 h-100 ">
+            <div className="card-body">
+              <h5 className="card-title"> Les articles</h5>
+              <h6 className="card-subtitle mb-2 text-muted">
+                {" "}
+                Maximisez votre culture web
+              </h6>
+              <p className="card-text">
+                Chaque auteur tente de vous apporter le plus de valeur possible
+              </p>
+              <Link href="/blog">
+                Voir les articles
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-12 col-sm-6">
+          <div className="card w-100 h-100 ">
+            <div className="card-body">
+              <h5 className="card-title"> Les articles</h5>
+              <h6 className="card-subtitle mb-2 text-muted">
+                {" "}
+                Maximisez votre culture web
+              </h6>
+              <p className="card-text">
+                Chaque auteur tente de vous apporter le plus de valeur possible
+              </p>
+              <Link href="/blog">
+                Voir les articles
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </>
-    
-  )
-}
-
-//getStaticProps va s'executer seulement losqu'on va build notre application l'on pourrait mettre des credentials ici ou des clefs d'api etc... 
-//la function get static props est une function qui va nous permettre de récupérer des données avant que la page soit rendue.
-export async function getStaticProps() {
-  //j'utilise la methode import pour importer les données locales.
- const data = await import ('../data/vocabulary.json')
- //je les assigne dans un tableau
- const array = data.vocabulary;
-//je verifie que le tableau n'est pas vide 
-//si il est vide je retourne un objet avec un props notfound a true
-//  if (array.lenght === 0) {
-//     return {
-//       notfound: true
-//     }
-//   }
-
-//je peux renvoyer aussi un objet avec un redirect qui va me rediriger vers une autre page
-if (array.lenght === 0) {
-  return {
-    redirect:{
-      destination: '/',
-    } 
-  }
-}
-
-//tres important je retounre un objet avec un props qui contient le tableau
- return{
-  props:{
-    array
-  }
- }
+  );
 }
