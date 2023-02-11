@@ -75,7 +75,7 @@ export default function Home(props) {
               <p className="card-text">
                 ca sert a rien 
               </p>
-              <Link href="/user">
+              <Link href="/randomword">
                 Vous voulez quand même y aller ?
               </Link>
             </div>
