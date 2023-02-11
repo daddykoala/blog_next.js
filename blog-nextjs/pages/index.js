@@ -31,16 +31,16 @@ export default function Home(props) {
         <div className="col-12 col-sm-6" style={{minHeight:"200px"}}>
           <div className="card w-100 h-100 ">
             <div className="card-body">
-              <h5 className="card-title"> Les articles</h5>
+              <h5 className="card-title"> Les utilisateurs</h5>
               <h6 className="card-subtitle mb-2 text-muted">
                 {" "}
-                Maximisez votre culture web
+                Découvrez notre communauté
               </h6>
               <p className="card-text">
                 Chaque auteur tente de vous apporter le plus de valeur possible
               </p>
-              <Link href="/blog">
-                Voir les articles
+              <Link href="/user">
+                Voir les utilisateurs
               </Link>
             </div>
           </div>
