@@ -9,25 +9,33 @@ export default function random() {
     }, [])
 
     const newWord = () => {
+   
         fetch('api/vocapi')
         .then((res) => res.json())
-        .then((data) => 
-            setState(data)
+        .then(data => 
+        setState(data)
         )
-
-        let randomWord;
-        console.log(randomWord);
-        if (state) {
-            const array =state.vocabulary[0]
-            randomword = array[Math.floor(Math.random() * array.length).en];
-            console.log(randomWord);
-        }
+        
     }
+  
+    let randomWord;
+    
+
+        if (state) {
+            const array =state.vocabulary
+   
+            let randomIndex = Math.floor(Math.random() * array.length);
+            console.log(randomIndex,'ici');
+            randomWord = array[randomIndex].en;
+            console.log(randomWord,'la');
+        }
+
+
   return (
-    <div classname='container '>
-        <h1>Votre mot au hasard</h1>
-    <button  onclick ={newWord} className='btn btn-primary'> Let's go </button>
-    {/* <div>{state}</div> */}
+    <div classnName='container '>
+        <h1 className='text-center'>Votre mot au hasard</h1>
+    <button  onClick ={newWord} className='btn btn-primary d-block m-auto'> Let's go </button>
+    <h2 className='text-center mt-4'>{randomWord}</h2>
         </div>
   )
 }
