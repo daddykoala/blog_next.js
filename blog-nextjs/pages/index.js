@@ -93,7 +93,7 @@ export default function Home(props) {
               <p className="card-text">
                 Qu'est qu'on se marre !!!!
               </p>
-              <Link href="/user">
+              <Link href="/addwords">
                 Apperement vous voulez quand même y aller
               </Link>
             </div>
