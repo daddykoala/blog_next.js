@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function random() {
+export default function Random() {
 
     const [state, setState] = useState(false)
 

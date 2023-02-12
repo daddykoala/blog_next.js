@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react'
-
-export default function addWords() {
+//attention à bien mettre le nom de la fonction avec une majuscule avant le deploiement sinon il ne sait pas que c'est un composant react
+export default function AddWords() {
 
     const enWord= useRef()
     const frWord= useRef()
