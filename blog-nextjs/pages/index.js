@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+
 import Link from "next/link";
 
 //pour utiliser les données locales il faut utiliser la function getStaticProps
